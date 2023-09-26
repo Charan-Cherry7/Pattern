@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating an object  using constructor function</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function box(l,b,h){
+            this.l=l;
+            this.h=h;
+            this.b=b;
+        }
+        let b=new box(10,20,30);
+        b.display=function(){
+            console.log(`length:${b.l}`);
+            console.log(`breadth:${b.b}`);
+            console.log(`height:${b.h}`);
+ 
+        };
+        b.volume=function(){
+            return b.l*b.h*b.b;
+        }
+        b.display();
+        console.log(`volume of box is ${b.volume()}`);
+    </script>
+</body>
+</html>
